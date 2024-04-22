@@ -1,22 +1,5 @@
 //! Colors
 
-
-
-//! Main Settings
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-//! Body
-
-
-//! Header
-
-//! Colors
-
 $Black: #252525;
 $Black-2: #2f3435;
 $Black-3: #0b0b11;
@@ -75,6 +58,8 @@ $xxl: 1536px;
     box-sizing: border-box;
 }
 
+//! Body
+
 body {
     color: $Black-2;
     background-color: $Black-2;
@@ -96,7 +81,7 @@ a {
     color: white;
 }
 
-//! Navbar STyles are here
+//! Header & Navbar Styles are here
 
 nav {
     display: flex;
