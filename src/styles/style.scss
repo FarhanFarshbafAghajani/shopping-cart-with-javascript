@@ -1,0 +1,600 @@
+//! Colors
+
+
+
+//! Main Settings
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+//! Body
+
+
+//! Header
+
+//! Colors
+
+$Black: #252525;
+$Black-2: #2f3435;
+$Black-3: #0b0b11;
+$Gray: #65656b;
+$DarkGray: #333333;
+$White: #fafbff;
+$White-2: #bfc3c4;
+$BodyWhite: #daddf1;
+$Blue: #39a2db;
+$Blue-2: #1f8fff;
+$Blue-3: #7bacd5;
+$DarkBlue: #295396;
+$DarkBlue-2: #054782;
+$DarkBlue-3: #23314c;
+$LightBlue: #4ab6c0;
+$StrangeColor: #9ab5bc;
+$StrangeColor-2: #80a9bc;
+$StrangeColor-3: #568795;
+$Brown: #453a3a;
+$DarkBrown: #36160b;
+$LightBrown: #d39e7c;
+$LightBrown-2: #fdd584;
+$Purple: #27296d;
+$purple-2: #5e63b6;
+$purple-3: #a393eb;
+$purple-4: #f5c7f7;
+$Purple-5: #5464eb;
+$DarkPurple: #242961;
+$LightPurple: #6d81fe;
+$LightPurple-2: #8288c3;
+$Yellow: #FFD700;
+$Yellow-2: #facf4c;
+$Orange: #ff9001;
+$Orange-2: #f79c1d;
+$Orange-3: #fe983b;
+$Red: #f54748;
+$Red-2: #ff4701;
+$DarkRed: #951d26;
+$Green: #16c116;
+
+//! Sizes
+
+$border-radius: 10px;
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+$xxl: 1536px;
+
+
+//! Changing default styles of the browser
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: $Black-2;
+    background-color: $Black-2;
+    font-family: persian;
+    font-size: large;
+
+    @font-face {
+        font-family: persian;
+        src: url(B\ Ziba_0.ttf);
+    }
+}
+
+i {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+//! Navbar STyles are here
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: $Yellow;
+    color: $Black-2;
+    padding: 25px 60px;
+    margin-bottom: 20vh;
+    box-shadow: 0px 2px 5px $Black;
+
+    @media screen and (max-width: $sm) {
+        padding: 25px 10px;
+    }
+}
+
+//! SideBar
+
+.aligning-sidebar {
+    grid-column: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5vh;
+
+    svg {
+        cursor: pointer;
+        transition: 0.5s;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+
+    .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: $Yellow-2;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+
+        a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: $Black-2;
+            display: block;
+            transition: 0.3s;
+
+            &:hover {
+                color: $Red;
+            }
+        }
+
+        .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #111;
+            color: $Black;
+            padding: 10px 15px;
+            border: none;
+
+            &:hover {
+                background-color: $Red;
+            }
+        }
+    }
+}
+
+//! Header
+
+.Header {
+    color: $Black-2;
+    font-size: 32px;
+}
+
+//! Cart
+
+.cart {
+    position: relative;
+    background-color: $Black-2;
+    color: $Yellow;
+    font-size: 30px;
+    padding: 5px;
+    border-radius: 4px;
+    transition: 0.5s;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+.cartAmount {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    font-size: 16px;
+    background-color: $Orange;
+    box-shadow: 2px 2px 2px $Black-2;
+    color: $Black-2;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+//! Shop items styles are here
+
+.shop {
+    display: grid;
+    grid-template-columns: repeat(4, 223px);
+    gap: 50px;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    @media (max-width: $xxl) and (min-width: $lg) {
+        grid-template-columns: repeat(4, 223px);
+    }
+
+    @media (max-width: $lg) and (min-width: $md) {
+        grid-template-columns: repeat(3, 223px);
+    }
+
+    @media (max-width: $md) {
+        grid-template-columns: repeat(2, 223px);
+    }
+
+    @media (max-width: $sm) {
+        grid-template-columns: repeat(1, 223px);
+    }
+}
+
+.aligning-header-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10vh;
+}
+
+.header-items {
+    width: 45vh;
+    height: 10vh;
+    color: $Black-2;
+    background-color: $Yellow;
+    border-radius: $border-radius;
+    box-shadow: 2px 2px 5px $Black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.item {
+    color: $Black-2;
+    background-color: $Yellow;
+    border-radius: 15px 2px 15px 2px;
+    box-shadow: 3px 3px 5px $Black;
+    transition: 0.5s;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    img {
+        width: 100%;
+        border-radius: 14px 1px 0px 0px;
+    }
+}
+
+
+.details {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+
+    h3,
+    p {
+        text-align: right;
+    }
+}
+
+.price-quantity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    font-size: 16px;
+}
+
+.bi-dash-lg {
+    color: $Red;
+}
+
+.bi-plus-lg {
+    color: $Green;
+}
+
+//! style rules for label and some buttons
+
+.text-center {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.HomeBtn,
+.checkout,
+.removeAll {
+    background-color: $Yellow;
+    color: $Black-2;
+    border: none;
+    padding: 10px;
+    border-radius: $border-radius;
+    cursor: pointer;
+    margin-top: 10vh;
+    margin: 0 3vh;
+    box-shadow: 3px 3px 5px $Black;
+    transition: 0.5s;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+.checkout {
+    background-color: $Green;
+}
+
+.removeAll {
+    background-color: $Red;
+}
+
+.bi-x-lg {
+    color: $Red;
+    font-weight: bold;
+}
+
+//! style rules for shopping-cart
+
+.shopping-cart {
+    display: grid;
+    grid-template-columns: repeat(1, 320px);
+    justify-content: center;
+    gap: 15px;
+}
+
+//! style rules for cart-item
+
+.cart-item {
+    border: 2px solid $Yellow;
+    border-radius: 5px;
+    display: flex;
+    background-color: $Yellow;
+}
+
+.title-price-x {
+    width: 195px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // border: 2px solid red;
+}
+
+.title-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-item-price {
+    background-color: $Yellow;
+    color: $Black-2;
+    border-radius: 4px;
+    padding: 3px 6px;
+}
+
+//! Contact-Us
+
+.logo {
+    img {
+        width: 50px;
+        height: 50px;
+        border-radius: 15px 2px 15px 2px;
+        box-shadow: 2px 2px 4px $Black;
+    }
+}
+
+.centering-contact-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-us {
+    width: 50vh;
+    height: 50vh;
+    padding: 3vh;
+    background-color: $Yellow;
+    border-radius: 15px 2px 15px 2px;
+    box-shadow: 2px 2px 5px $Black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    p {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    a {
+        color: $Black-2;
+        transition: 0.5s;
+
+        &:hover {
+            color: $Red;
+        }
+    }
+}
+
+//! About-Us
+
+.centering-About-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.About-us {
+    width: 50vh;
+    height: 20vh;
+    padding: 3vh;
+    background-color: $Yellow;
+    border-radius: 15px 2px 15px 2px;
+    box-shadow: 2px 2px 5px $Black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+//! Admin Login
+
+.centering-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    form {
+        width: 50vh;
+        height: 40vh;
+        background-color: $Yellow;
+        border-radius: 15px 2px 15px 2px;
+        box-shadow: 2px 2px 5px $Black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        input {
+            width: 85%;
+            padding: 1vh;
+            border: 2px solid $Orange;
+            border-radius: 5px 2px 5px 2px;
+            box-shadow: 2px 2px 5px $Black;
+            transition: 0.5s;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            &:focus {
+                background-color: $Black-2;
+                color: $Yellow;
+
+                &::placeholder {
+                    text-align: right;
+                    color: $Yellow;
+                }
+            }
+
+            &:invalid {
+                border: 2px solid $Red;
+            }
+
+            &:valid {
+                border: 2px solid $Green;
+            }
+        }
+
+        button {
+            width: 70%;
+            padding: 1vh;
+            color: $Yellow;
+            background-color: $Black-2;
+            border: none;
+            border-radius: 5px 2px 5px 2px;
+            box-shadow: 2px 2px 5px $Black;
+            transition: 0.5s;
+
+            &:hover {
+                cursor: pointer;
+                transform: translateY(-5px);
+            }
+        }
+    }
+}
+
+.coloring-check-btn {
+    width: 10vh;
+    height: 10vh;
+    margin-left: 10vh;
+    background-color: $Yellow;
+    border-radius: 15px 2px 15px 2px;
+    box-shadow: 2px 2px 5px $Black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+        width: 70%;
+        padding: 1vh;
+        color: $Yellow;
+        background-color: $Black-2;
+        border: none;
+        border-radius: 5px 2px 5px 2px;
+        box-shadow: 2px 2px 5px $Black;
+        transition: 0.5s;
+
+        &:hover {
+            cursor: pointer;
+            transform: translateY(-5px);
+        }
+    }
+}
+
+#submit {
+    display: none;
+}
+
+.displaysetting {
+    #submit {
+        display: block;
+    }
+}
+
+//! Footer
+
+footer {
+    height: 30vh;
+    color: $Black-2;
+    background-color: $Yellow;
+    box-shadow: 0px -2px 5px $Black;
+    margin-top: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li {
+        cursor: pointer;
+        margin: 0 20vh;
+        display: inline-block;
+
+        @media screen and (max-width: $md) {
+            display: block;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        a {
+            color: $Black-2;
+            text-decoration: none;
+            transition: 0.5s;
+
+            &:hover {
+                color: $Red;
+            }
+        }
+    }
+}
